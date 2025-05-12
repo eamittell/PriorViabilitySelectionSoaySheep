@@ -14,9 +14,13 @@ J.M.P, M.B.M, L.E.B.K, and E.A.M collected the data. E.A.M and M.B.M analysed th
 
 CovuDataABMFYS_120525_RandomIDs.csv, CovuDataAMTLFYS_120525_RandomIDs, CovuDataMHLFYS_120525_RandomIDs, and CovuDataMSCFYS_120525_RandomIDs, contain the phenotypic data for the bivariate animal models in the first section of the analyses. The names ABM, AMTL, MHL, MCS and FYS refer to August body mass, August metatarsal length, male horn length, scrotal circumference (males) and first year survival. SheepPedigreeRandomIds_May2025.csv contains the pedigree for the Soay sheep population. The IDs within all these files have been randomised. This means that they should link to each other, but will not link to any other data published from the Soay sheep Project.
 
+# Section one -- genetic signatures of prior viability selection
 CovuDataABMFYS_120525_RandomIDs.csv columns are (same across these Covu files): id -- randomised ID; animal -- randomised ID that links to pedigree; time -- year of measurement for adult traits; y -- trait value; Twin -- whether the individual was a twin or singleton; Sex -- 1 indicates female, 2 indicates male; Horn -- 1 indicates, 2 indicates, 3 indicates; BirthYear -- birth year; PopDensBirth -- population size in the year of birth; MumID -- randomised maternal ID; jdate -- measurement Julian date for adult traits; PopDensCap -- population size in the year of measurement; CapAgeYears -- age of sheep; horngeno -- horn genotype; trait -- r indicates adult trait, s indicates first year survival; measure -- S1 indicates first year survival, others indicate adult trait name; family -- distribution of the variable specified for the covu models; MumAge -- age of the dam; AgeMC -- age mean centred within adults; jdateMC -- measurement Julian date mean centred within adults; AgeMC -- age mean centred within adults; MumAgeMC -- maternal age mean centred within juveniles; PopDensMS -- population density mean centred within juvenile and adult traits.
 
-e.R contains the models that were used in the manuscript. The packages used are shown within the script. These models were run in various versions of R. All run and are installable in R version 4.3.2 as of 5th April 2024 on macOS Monterey version 12.7.1.
+.R contains the models that were used in the manuscript. The packages used are shown within the script. These models were run in various versions of R. All run and are installable in R version 4.3.2 as of 5th April 2024 on macOS Monterey version 12.7.1.
+
+# Section two -- phenotypic episodes of selection
+
 
 ## SOAY SHEEP PROJECT DATA REUSE STATEMENT:
 
