@@ -14,11 +14,11 @@ J.M.P, M.B.M, L.E.B.K, and E.A.M collected the data. E.A.M and M.B.M analysed th
 In the file names ABM, AMTL, MHL, MCS and FYS refer to August body mass, August metatarsal length, male horn length, scrotal circumference (males) and first year survival. SheepPedigreeRandomIds_May2025.csv contains the pedigree for the Soay sheep population. The IDs within all these files have been randomised. This means that they should link to each other, but will not link to any other data published from the Soay sheep Project.
 
 ### Section one -- genetic signatures of prior viability selection
-\emph{Prior viability selection}
+_Prior viability selection_
 
 CovuDataABMFYS_120525_RandomIDs.csv, CovuDataAMTLFYS_120525_RandomIDs, CovuDataMHLFYS_120525_RandomIDs, and CovuDataMSCFYS_120525_RandomIDs, contain the phenotypic data for the bivariate animal models in the first section of the analyses. In these dataframes the columns are the same: id -- randomised ID; animal -- randomised ID that links to pedigree; time -- year of measurement for adult traits; y -- trait value; Twin -- whether the individual was a twin or singleton; Sex -- 1 indicates female, 2 indicates male; Horn -- 1 indicates scurred, 3 indicates normal horns; BirthYear -- birth year; PopDensBirth -- population size in the year of birth; MumID -- randomised maternal ID; jdate -- measurement Julian date for adult traits; PopDensCap -- population size in the year of measurement; CapAgeYears -- age of sheep; horngeno -- horn genotype; trait -- r indicates adult trait, s indicates first year survival; measure -- S1 indicates first year survival, others indicate adult trait name; family -- distribution of the variable specified for the covu models; MumAge -- age of the dam; AgeMC -- age mean centred within adults; jdateMC -- measurement Julian date mean centred within adults; AgeMC -- age mean centred within adults; MumAgeMC -- maternal age mean centred within juveniles; PopDensMS -- population density mean centred within juvenile and adult traits.
 
-\emph{Response to selection using only information on adults}
+_Response to selection using only information on adults_
 
 DataUniVarABM_h2_RandomIDs_May2025, DataUniVarAMTL_h2_RandomIDs_May2025, DataUniVarMHL_h2_RandomIDs_May2025, and DataUniVarMSC_h2_RandomIDs_May2025, contain the phenotypic data for the univariate animal models used to estimate heritability of adult size traits. DataAdultPhenoSel_ABM_RandomIDs_May2025, DataAdultPhenoSel_AMTL_RandomIDs_May2025, DataAdultPhenoSel_MHL_RandomIDs_May2025, and DataAdultPhenoSel_MSC_RandomIDs_May2025, contain the phenotypic information used to estimate selection on adult size traits using information on adults alone. 
 
