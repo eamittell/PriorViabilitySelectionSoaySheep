@@ -329,7 +329,7 @@ pruned <- prunePed(pedigree,keep=data$ID)
 
 # Univariate animal model
 priorAAW1 <- list(R = list(R1=list(V=1, nu=2.002)), G=list(G1=list(V=1,nu=2.002),G2=list(V=1,nu=2.002),G3=list(V=1,nu=2.002),G4=list(V=1,nu=2.002)))
-UniAAW1 <- MCMCglmm(Weight ~ CapAgeYears + Sex + Twin + jdateMC + PopDensMC, random=~animal + CapYear + ID + BirthYear, rcov=~units, family="gaussian", data=data, pedigree=pruned, prior=priorAAW1,nitt=10,thin=1,burnin=1)#, nitt=1505000,thin=500,burnin=5000)
+UniAAW1 <- MCMCglmm(Weight ~ CapAgeYears + Sex + Twin + jdateMC + PopDensMC, random=~animal + CapYear + ID + BirthYear, rcov=~units, family="gaussian", data=data, pedigree=pruned, prior=priorAAW1, nitt=1505000,thin=500,burnin=5000)
 save(UniAAW1,file="UniAAW1_120525.RData")
 
 # Selection #
@@ -364,6 +364,27 @@ save(BivModelCovuAAMF,file="phenSelCovuAAM_females_130525.RData")
 #############################
 ## Adult metatarsal length ##
 #############################
+# Heritability #
+# Load model data
+data <- read.csv(paste(file_path_data,"DataUniVarAMTL_h2_RandomIds_May2025.csv",sep=""))
+
+# Format
+data$animal <- as.factor(data$animal)
+data$ID <- as.factor(data$ID)
+data$CapYear <- as.factor(data$CapYear)
+data$BirthYear <- as.factor(data$BirthYear)
+data$CapAgeYears <- as.factor(data$CapAgeYears)
+str(data)
+summary(data)
+
+# Prune pedigree
+pruned <- prunePed(pedigree,keep=data$ID)
+
+# Univariate animal model
+priorAHL <- list(R = list(R1=list(V=1, nu=2.002)), G=list(G1=list(V=1,nu=2.002),G2=list(V=1,nu=2.002),G3=list(V=1,nu=2.002),G4=list(V=1,nu=2.002)))
+UniAHL <- MCMCglmm(HindLeg ~ CapAgeYears + Sex + Twin + jdateMC + PopDensMC, random=~animal + CapYear + ID + BirthYear, rcov=~units, family = "gaussian", data=data, pedigree=pruned, prior=priorAHL, nitt=1505000,thin=500,burnin=5000)
+save(UniAHL,file="UniAHL_080125.RData")
+
 # Load model data
 data <- read.csv(paste(file_path_data,"DataAdultPhenoSel_AMTL_RandomIds_May2025.csv",sep=""))
 
@@ -395,6 +416,28 @@ save(BivModelCovuMTLF,file="phenSelCovuMTL_females_130525.RData")
 ######################
 ## Male horn length ##
 ######################
+# Heritability #
+# Load model data
+data <- read.csv(paste(file_path_data,"DataUniVarMHL_h2_RandomIds_May2025.csv",sep=""))
+
+# Format
+data$animal <- as.factor(data$animal)
+data$ID <- as.factor(data$ID)
+data$CapYear <- as.factor(data$CapYear)
+data$BirthYear <- as.factor(data$BirthYear)
+data$CapAgeYears <- as.factor(data$CapAgeYears)
+str(data)
+summary(data)
+
+# Prune pedigree
+pruned <- prunePed(pedigree,keep=data$ID)
+
+# Univariate animal model
+priorMHL <- list(R = list(R1=list(V=1, nu=2.002)), G=list(G1=list(V=1,nu=2.002),G2=list(V=1,nu=2.002),G3=list(V=1,nu=2.002),G4=list(V=1,nu=2.002)))
+UniMHL <- MCMCglmm(HornLen ~ CapAgeYears + Twin + jdateMC + PopDensMC, random=~animal + CapYear + ID + BirthYear, rcov=~units, family = "gaussian", data=data, pedigree=pruned, prior=priorMHL nitt=1505000,thin=500,burnin=5000)
+save(UniMHL,file="UniMHL_080125.RData")
+
+# Selection #
 # Load model data
 data <- read.csv(paste(file_path_data,"DataAdultPhenoSel_MHL_RandomIds_May2025.csv",sep=""))
 
@@ -413,6 +456,28 @@ save(BivModelCovuMHL,file="phenSelCovuMHL_130525.RData")
 ###########################
 ## Scrotal circumference ##
 ###########################
+# Heritability #
+# Load model data
+data <- read.csv(paste(file_path_data,"DataUniVarMSC_h2_RandomIds_May2025.csv",sep=""))
+
+# Format
+data$animal <- as.factor(data$animal)
+data$ID <- as.factor(data$ID)
+data$CapYear <- as.factor(data$CapYear)
+data$BirthYear <- as.factor(data$BirthYear)
+data$CapAgeYears <- as.factor(data$CapAgeYears)
+str(data)
+summary(data)
+
+# Prune pedigree
+pruned <- prunePed(pedigree,keep=data$ID)
+
+# Univariate animal model
+priorMSC <- list(R = list(R1=list(V=1, nu=2.002)), G=list(G1=list(V=1,nu=2.002),G2=list(V=1,nu=2.002),G3=list(V=1,nu=2.002),G4=list(V=1,nu=2.002)))
+UniMSC <- MCMCglmm(BolCirc ~ CapAgeYears + Twin + jdateMC + PopDensMC, random=~animal + CapYear + ID + BirthYear, rcov=~units, family = "gaussian", data=data, pedigree=pruned, prior=priorMSC nitt=1505000,thin=500,burnin=5000)
+save(UniMSC,file="UniMSC_080125.RData")
+
+# Selection #
 # Load model data
 data <- read.csv(paste(file_path_data,"DataAdultPhenoSel_MSC_RandomIds_May2025.csv",sep=""))
 
