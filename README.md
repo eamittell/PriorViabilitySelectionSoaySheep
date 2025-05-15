@@ -18,15 +18,24 @@ All the dataframes have columns in common, which are: id/ID -- randomised ID; an
 ### Section one -- genetic signatures of prior viability selection
 _Prior viability selection_
 
-CovuDataABMFYS_120525_RandomIDs.csv, CovuDataAMTLFYS_120525_RandomIDs, CovuDataMHLFYS_120525_RandomIDs, and CovuDataMSCFYS_120525_RandomIDs, contain the phenotypic data for the bivariate animal models in the first section of the analyses.
+CovuDataABMFYS_120525_RandomIDs.csv, CovuDataAMTLFYS_120525_RandomIDs.csv, CovuDataMHLFYS_120525_RandomIDs.csv, and CovuDataMSCFYS_120525_RandomIDs.csv, contain the phenotypic data for the bivariate animal models in the first section of the analyses.
 
 _Response to selection using only information on adults_
 
-DataUniVarABM_h2_RandomIDs_May2025, DataUniVarAMTL_h2_RandomIDs_May2025, DataUniVarMHL_h2_RandomIDs_May2025, and DataUniVarMSC_h2_RandomIDs_May2025, contain the phenotypic data for the univariate animal models used to estimate heritability of adult size traits. DataAdultPhenoSel_ABM_RandomIDs_May2025, DataAdultPhenoSel_AMTL_RandomIDs_May2025, DataAdultPhenoSel_MHL_RandomIDs_May2025, and DataAdultPhenoSel_MSC_RandomIDs_May2025, contain the phenotypic information used to estimate selection on adult size traits using information on adults alone. 
+DataUniVarABM_h2_RandomIDs_May2025.csv, DataUniVarAMTL_h2_RandomIDs_May2025.csv, DataUniVarMHL_h2_RandomIDs_May2025.csv, and DataUniVarMSC_h2_RandomIDs_May2025.csv, contain the phenotypic data for the univariate animal models used to estimate heritability of adult size traits. DataAdultPhenoSel_ABM_RandomIDs_May2025.csv, DataAdultPhenoSel_AMTL_RandomIDs_May2025.csv, DataAdultPhenoSel_MHL_RandomIDs_May2025.csv, and DataAdultPhenoSel_MSC_RandomIDs_May2025.csv, contain the phenotypic information used to estimate selection on adult size traits using information on adults alone. 
 
 Section1_GeneticSignaturesPriorViabilitySelection.R contains the models that were used in section 1 of the manuscript. The packages used are shown within the script. These models were run in various versions of R. All run and are installable in R version 4.3.2 as of 13th May 2025 on macOS Monterey version 12.7.1.
 
 ### Section two -- phenotypic episodes of selection
+_Viability selection lamb size traits_
+
+DataPhenoSel_LABM_RandomIds_May2025.csv, DataPhenoSel_LAMTL_RandomIds_May2025.csv, DataPhenoSel_LMHL_RandomIds_May2025.csv, and DataPhenoSel_LMSC_RandomIds_May2025.csv, contain these phenotypic data for the bivariate models.
+
+_Phenotypic covariance between homologous lamb and adult size traits_
+DataPhenoCovu_ABM_LABM_RandomIds_May2025.csv, DataPhenoCovu_AMTL_LMTL_RandomIds_May2025.csv, DataPhenoCovu_AMHL_LMHL_RandomIds_May2025.csv, and DataPhenoCovu_AMSC_LMSC_RandomIds_May2025.csv, contain the phenotypic data for these bivariate models.
+
+_Phenotypic covariance among lamb size traits_
+DataPhenoCovarLambTraits_RandomIds_May2025.csv contains the phenotypic data for the multiresponse model.
 
 Section2_PhenotypicEpisodesofSelection.R contains the models that were used in section 2 of the manuscript. The packages used are shown within the script. These models were run in various versions of R. All run and are installable in R version 4.3.2 as of 13th May 2025 on macOS Monterey version 12.7.1.
 
