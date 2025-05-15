@@ -8,7 +8,7 @@ library(MCMCglmm)
 library(QGglmm)
 
 # File path to data -- edit as appropriate
-file_path_data <- "/Users/umer/Documents/Work/Evol_Climate_Change/Analyses/SoaySheep/ProcessedData/"
+file_path_data <- ""
 # File path to output -- edit as appropriate
 file_path_output <- ""
 
@@ -313,7 +313,7 @@ save(DataScaleRes, file=paste(file_path_output,"DataScaleResMSCcovuFYS_malesonly
 ############################
 # Heritability #
 # Load model data
-data <- read.csv(paste(file_path_data,"UniVarABM_h2_RandomIds_May2025.csv",sep=""))
+data <- read.csv(paste(file_path_data,"DataUniVarABM_h2_RandomIds_May2025.csv",sep=""))
 
 # Format
 data$animal <- as.factor(data$animal)
@@ -392,7 +392,6 @@ priorC <- list(R = list(R1=list(V=diag(2), nu=2.002, covu=TRUE), R2=list(V=1, nu
 BivModelCovuMTLF <- MCMCglmm(y ~ trait - 1 + at.level(trait,"r"):CapAgeYears + at.level(trait,"r"):Twin + at.level(trait,"r"):jdateMC + trait:PopDensMC, random=~idh(at.level(trait,"r")):id, rcov=~idh(at.level(trait,"s")):id + idh(at.level(trait,"r")):id:time, family = NULL, data=femalesC, prior=priorC,nitt=26000,thin=10,burnin=3000)
 save(BivModelCovuMTLF,file="phenSelCovuMTL_females_130525.RData")
 
-
 ######################
 ## Male horn length ##
 ######################
@@ -410,7 +409,6 @@ summary(data)
 priorC <- list(R = list(R1=list(V=diag(2), nu=2.002, covu=TRUE), R2=list(V=1, nu=2.002)))
 BivModelCovuMHL <- MCMCglmm(y ~ trait - 1 + at.level(trait,"r"):CapAgeYears + trait:Twin + at.level(trait,"r"):jdateMC + trait:PopDensMC, random=~idh(at.level(trait,"r")):id, rcov=~idh(at.level(trait,"s")):id + idh(at.level(trait,"r")):id:time, family = NULL, data=data, prior=priorC,nitt=26000,thin=10,burnin=3000)
 save(BivModelCovuMHL,file="phenSelCovuMHL_130525.RData") 
-
 
 ###########################
 ## Scrotal circumference ##
