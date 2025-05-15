@@ -8,8 +8,7 @@ library(MCMCglmm)
 library(mvtnorm)
 
 # File path to data -- edit as appropriate
-#file_path_data <- ""
-file_path_data <- "/Users/umer/Documents/Work/Evol_Climate_Change/Analyses/SoaySheep/ProcessedData/"
+file_path_data <- ""
 # File path to output -- edit as appropriate
 file_path_output <- ""
 
