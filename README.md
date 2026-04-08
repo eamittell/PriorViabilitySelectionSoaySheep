@@ -1,6 +1,6 @@
-# Quantitative genetic analysis of early life viability resolves a case of the paradox of stasis in body size traits of Soay sheep
+# Unmeasured prior viability selection resolves the paradox of stasis for body size in wild Soay sheep
 
-The code in this repository is to run the models presented in the manuscript above. In this study we assess quantitative genetic parameters to gain an evolutionary explanation as to why adult size traits are not evolving in the direction of current estimates of the response to selection within this wild population of Soay sheep.
+The code in this repository is to run the models presented in the manuscript: https://doi.org/10.1073/pnas.2513969122. In this study we assess quantitative genetic parameters to gain an evolutionary explanation as to why adult size traits are not evolving in the direction of current estimates of the response to selection within this wild population of Soay sheep.
 
 Elizabeth A. Mittell1,2,*, Josephine M. Pemberton1, Loeske E. B. Kruuk1 & Michael B. Morrissey2
 
